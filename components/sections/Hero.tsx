@@ -51,7 +51,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 md:mb-10 max-w-2xl mx-auto px-4"
         >
-          AI isn't just for big companies — we bring AI automation to the businesses that actually need it.
+          AI isn&apos;t just for big companies — we bring AI automation to the businesses that actually need it.
         </motion.p>
 
         {/* Mobile-optimized buttons - stack on mobile */}

@@ -81,7 +81,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto"
           >
-            Ready to automate your business? Let's discuss how AI can transform your workflows.
+            Ready to automate your business? Let&apos;s discuss how AI can transform your workflows.
           </motion.p>
         </div>
       </section>
@@ -166,7 +166,7 @@ export default function ContactPage() {
                       animate={{ opacity: 1, y: 0 }}
                       className="p-4 bg-green-500/10 border border-green-500/30 rounded-lg text-green-400 text-sm sm:text-base"
                     >
-                      Thank you! We've received your message and will get back to you soon.
+                      Thank you! We&apos;ve received your message and will get back to you soon.
                     </motion.div>
                   )}
 

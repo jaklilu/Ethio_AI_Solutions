@@ -188,7 +188,7 @@ export default function ServicesPage() {
               Ready to Get Started?
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-10">
-              Let's discuss how we can help automate your business processes.
+              Let&apos;s discuss how we can help automate your business processes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary" size="md">

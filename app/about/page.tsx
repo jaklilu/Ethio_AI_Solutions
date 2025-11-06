@@ -67,13 +67,13 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                AI isn't just for big companies. At Ethio AI Solutions, we believe that every business, regardless of size, should have access to powerful AI automation tools.
+                AI isn&apos;t just for big companies. At Ethio AI Solutions, we believe that every business, regardless of size, should have access to powerful AI automation tools.
               </p>
               <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-4 sm:mb-6 leading-relaxed">
                 We specialize in creating affordable, practical AI solutions that help small and mid-sized businesses automate processes, reduce manual work, and compete more effectively. Our goal is to make AI accessible, understandable, and valuable for the businesses that power our economy.
               </p>
               <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed">
-                Whether you're a solo entrepreneur, a growing startup, or an established small business, we help you leverage AI the same way large enterprises do — without the enterprise price tag.
+                Whether you&apos;re a solo entrepreneur, a growing startup, or an established small business, we help you leverage AI the same way large enterprises do — without the enterprise price tag.
               </p>
             </motion.div>
           </Card>
@@ -137,10 +137,10 @@ export default function AboutPage() {
                 Why We Do This
               </h2>
               <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-4 sm:mb-6 leading-relaxed">
-                Having worked with both large enterprises and small businesses, we've seen firsthand how AI can transform operations. However, we also noticed that small businesses were often left behind, unable to access the same powerful tools due to cost and complexity.
+                Having worked with both large enterprises and small businesses, we&apos;ve seen firsthand how AI can transform operations. However, we also noticed that small businesses were often left behind, unable to access the same powerful tools due to cost and complexity.
               </p>
               <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-4 sm:mb-6 leading-relaxed">
-                That's why we founded Ethio AI Solutions — to bridge that gap. We combine deep technical expertise with a focus on practical, affordable solutions. We understand that small businesses need results, not just technology for technology's sake.
+                That&apos;s why we founded Ethio AI Solutions — to bridge that gap. We combine deep technical expertise with a focus on practical, affordable solutions. We understand that small businesses need results, not just technology for technology&apos;s sake.
               </p>
               <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed">
                 Every solution we build is designed with your business in mind: clear ROI, quick implementation, and real impact. Because when your business succeeds, we succeed.
@@ -163,7 +163,7 @@ export default function AboutPage() {
               Ready to Work Together?
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-10">
-              Let's discuss how AI can help your business grow.
+              Let&apos;s discuss how AI can help your business grow.
             </p>
             <Button href="/contact" variant="primary" size="md">
               Get In Touch
