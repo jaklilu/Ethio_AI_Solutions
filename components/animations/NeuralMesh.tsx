@@ -22,15 +22,17 @@ export default function NeuralMesh() {
 
     // Node class
     class Node {
+      private canvas: HTMLCanvasElement
       x: number
       y: number
       vx: number
       vy: number
       radius: number
 
-      constructor() {
-        this.x = Math.random() * canvasElement.width
-        this.y = Math.random() * canvasElement.height
+      constructor(canvas: HTMLCanvasElement) {
+        this.canvas = canvas
+        this.x = Math.random() * this.canvas.width
+        this.y = Math.random() * this.canvas.height
         this.vx = (Math.random() - 0.5) * 0.5
         this.vy = (Math.random() - 0.5) * 0.5
         this.radius = Math.random() * 2 + 1
@@ -40,8 +42,8 @@ export default function NeuralMesh() {
         this.x += this.vx
         this.y += this.vy
 
-        if (this.x < 0 || this.x > canvasElement.width) this.vx *= -1
-        if (this.y < 0 || this.y > canvasElement.height) this.vy *= -1
+        if (this.x < 0 || this.x > this.canvas.width) this.vx *= -1
+        if (this.y < 0 || this.y > this.canvas.height) this.vy *= -1
       }
 
       draw() {
@@ -57,7 +59,7 @@ export default function NeuralMesh() {
     const nodeCount = window.innerWidth < 768 ? 30 : 50
     const nodes: Node[] = []
     for (let i = 0; i < nodeCount; i++) {
-      nodes.push(new Node())
+      nodes.push(new Node(canvasElement))
     }
 
     // Animation loop
