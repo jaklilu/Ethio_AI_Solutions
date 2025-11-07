@@ -109,3 +109,11 @@ select {
   }
 }
 
+/* Ensure mobile menu is always visible when open */
+@media (max-width: 767px) {
+  [data-menu-open="true"] {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
