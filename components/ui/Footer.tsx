@@ -129,7 +129,10 @@ export default function Footer() {
         <div className="mt-8 sm:mt-12 pt-8 border-t border-gold-primary/10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-xs sm:text-sm text-gray-500 text-center sm:text-left">
-              © {currentYear} Ethio AI Solutions. All rights reserved.
+              © {currentYear}{' '}
+              <span className="text-green-primary">Ethio</span>{' '}
+              <span className="text-gold-primary">AI</span>{' '}
+              <span className="text-red-primary">Solutions</span>. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-500">
               <Link href="/privacy" className="hover:text-gold-primary transition-colors touch-manipulation">
