@@ -23,6 +23,14 @@ const config: Config = {
           cyan: '#00ffff',
           purple: '#b026ff',
         },
+        green: {
+          primary: '#10b981', // emerald-500
+          accent: '#34d399', // emerald-400
+        },
+        red: {
+          primary: '#ef4444', // red-500
+          accent: '#f87171', // red-400
+        },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],

@@ -33,8 +33,10 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4 group">
               <Brain className="w-6 h-6 text-gold-primary group-hover:rotate-12 transition-transform" />
-              <span className="text-xl font-bold bg-gradient-to-r from-gold-primary to-gold-accent bg-clip-text text-transparent">
-                Ethio AI Solutions
+              <span className="text-xl font-bold">
+                <span className="text-green-primary">Ethio</span>{' '}
+                <span className="text-gold-primary">AI</span>{' '}
+                <span className="text-red-primary">Solutions</span>
               </span>
             </Link>
             <p className="text-sm text-gray-400 mb-4 leading-relaxed">

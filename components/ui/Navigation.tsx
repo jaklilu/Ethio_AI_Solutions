@@ -49,8 +49,10 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-14 sm:h-16">
             <Link href="/" className="flex items-center gap-1.5 sm:gap-2 group flex-shrink-0">
               <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-gold-primary group-hover:rotate-12 transition-transform" />
-              <span className="text-lg sm:text-xl font-bold bg-gradient-to-r from-gold-primary to-gold-accent bg-clip-text text-transparent whitespace-nowrap">
-                Ethio AI Solutions
+              <span className="text-lg sm:text-xl font-bold whitespace-nowrap">
+                <span className="text-green-primary">Ethio</span>{' '}
+                <span className="text-gold-primary">AI</span>{' '}
+                <span className="text-red-primary">Solutions</span>
               </span>
             </Link>
 
