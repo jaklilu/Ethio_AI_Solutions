@@ -17,34 +17,19 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Close mobile menu when clicking outside or pressing escape
+  // Close mobile menu when pressing escape
   useEffect(() => {
-    if (isOpen) {
-      // Save current scroll position
-      const scrollY = window.scrollY
-      
-      // Lock body scroll
-      document.body.style.overflow = 'hidden'
-      document.body.style.position = 'fixed'
-      document.body.style.top = `-${scrollY}px`
-      document.body.style.width = '100%'
-      
-      const handleEscape = (e: KeyboardEvent) => {
-        if (e.key === 'Escape') {
-          setIsOpen(false)
-        }
+    if (!isOpen) return
+    
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false)
       }
-      
-      document.addEventListener('keydown', handleEscape)
-      return () => {
-        document.removeEventListener('keydown', handleEscape)
-        // Restore scroll position
-        document.body.style.overflow = ''
-        document.body.style.position = ''
-        document.body.style.top = ''
-        document.body.style.width = ''
-        window.scrollTo(0, scrollY)
-      }
+    }
+    
+    document.addEventListener('keydown', handleEscape)
+    return () => {
+      document.removeEventListener('keydown', handleEscape)
     }
   }, [isOpen])
 
@@ -83,13 +68,10 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Mobile menu button - larger touch target */}
+          {/* Mobile menu button */}
           <button
-            onClick={(e) => {
-              e.stopPropagation()
-              setIsOpen(!isOpen)
-            }}
-            className="md:hidden text-gray-300 hover:text-gold-primary transition-colors p-2 -mr-2 touch-manipulation relative z-[60]"
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-gray-300 hover:text-gold-primary transition-colors p-2 -mr-2 relative z-[70]"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
             type="button"
@@ -99,7 +81,7 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* Mobile Navigation - Full screen overlay */}
+      {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
           <>
@@ -109,47 +91,32 @@ export default function Navigation() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              onTouchStart={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/50 z-[45] md:hidden"
-              style={{ backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}
+              className="fixed inset-0 bg-black/60 z-[55] md:hidden"
+              aria-hidden="true"
             />
             
-            {/* Menu */}
+            {/* Menu Panel - slides in from right */}
             <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              onClick={(e) => e.stopPropagation()}
-              onTouchStart={(e) => e.stopPropagation()}
-              className="fixed top-14 sm:top-16 right-0 bottom-0 left-0 md:hidden bg-dark-elevated z-[50] overflow-y-auto touch-manipulation"
-              style={{ WebkitOverflowScrolling: 'touch' }}
+              transition={{ type: 'tween', duration: 0.3, ease: 'easeOut' }}
+              className="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-dark-elevated z-[60] md:hidden shadow-2xl overflow-y-auto"
+              style={{ 
+                WebkitOverflowScrolling: 'touch',
+                paddingTop: '56px'
+              }}
             >
-              <div className="px-6 py-8 space-y-1">
-                {navItems.map((item, index) => (
-                  <motion.div
+              <div className="px-6 py-8 space-y-2">
+                {navItems.map((item) => (
+                  <Link
                     key={item.name}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block text-gray-300 hover:text-gold-primary transition-colors py-4 px-4 text-lg font-medium border-b border-gold-primary/10 hover:border-gold-primary/30 active:bg-gold-primary/10 min-h-[56px] flex items-center touch-manipulation"
                   >
-                    <Link
-                      href={item.href}
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        setIsOpen(false)
-                      }}
-                      onTouchStart={(e) => {
-                        e.stopPropagation()
-                      }}
-                      onTouchEnd={() => {
-                        setIsOpen(false)
-                      }}
-                      className="block text-gray-300 hover:text-gold-primary transition-colors py-4 px-4 text-lg font-medium border-b border-gold-primary/10 hover:border-gold-primary/30 touch-manipulation min-h-[56px] flex items-center active:bg-gold-primary/5 select-none"
-                    >
-                      {item.name}
-                    </Link>
-                  </motion.div>
+                    {item.name}
+                  </Link>
                 ))}
               </div>
             </motion.div>
