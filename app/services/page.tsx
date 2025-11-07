@@ -22,63 +22,68 @@ export default function ServicesPage() {
       id: 'ai-agents',
       title: 'AI Agents',
       description: 'Intelligent automated agents that handle tasks 24/7',
-      longDescription: 'Our AI agents are intelligent systems that can interact with customers, process information, make decisions, and automate complex workflows. They learn from interactions and improve over time, providing increasingly better service.',
+      longDescription: 'Our AI agents are intelligent systems that can interact with customers, process information, make decisions, and automate complex workflows. They handle repetitive tasks, answer questions, and work around the clock — saving your team hours every day while improving customer experience.',
       icon: <Bot className="w-10 h-10 sm:w-12 sm:h-12 text-gold-primary" />,
       features: [
         '24/7 automated customer support',
         'Natural language processing',
         'Multi-channel communication',
         'Learning and improvement',
-        'Integration with existing systems'
+        'Integration with existing systems',
+        'Saves 10+ hours per week'
       ],
       useCases: [
         'Customer service chatbots',
         'Lead qualification and follow-up',
         'Appointment scheduling',
         'Order processing',
-        'FAQ automation'
+        'FAQ automation',
+        'Email response automation'
       ]
     },
     {
       id: 'automation',
       title: 'Workflow Automation',
       description: 'Streamline your business processes with smart automation',
-      longDescription: 'Automate repetitive tasks and workflows to save time, reduce errors, and free your team to focus on high-value work. Our automation solutions integrate seamlessly with your existing tools.',
+      longDescription: 'Automate repetitive tasks and workflows to save time, reduce errors, and free your team to focus on high-value work. Our automation solutions integrate seamlessly with your existing tools, eliminating manual data entry and reducing errors by up to 95%. Small businesses typically save 15-20 hours per week with our workflow automation.',
       icon: <Zap className="w-10 h-10 sm:w-12 sm:h-12 text-gold-primary" />,
       features: [
         'Process optimization',
         'Multi-tool integration',
-        'Error reduction',
-        'Time savings',
-        'Custom workflow design'
+        'Error reduction (up to 95%)',
+        'Time savings (15-20 hours/week)',
+        'Custom workflow design',
+        'No-code and low-code options'
       ],
       useCases: [
         'Email automation',
         'Data entry and processing',
         'Report generation',
         'Invoice processing',
-        'Inventory management'
+        'Inventory management',
+        'Client onboarding workflows',
+        'Payment reconciliation'
       ]
     },
     {
       id: 'integrations',
-      title: 'API Integrations',
-      description: 'Connect your tools and systems seamlessly',
-      longDescription: 'Connect disparate systems and tools to create a unified workflow. We build custom API integrations that allow your software to communicate and work together efficiently.',
+      title: 'Custom Dashboards & Small Apps',
+      description: 'Build custom dashboards and small applications tailored to your business',
+      longDescription: 'We create custom dashboards and small applications that consolidate your data, automate reporting, and provide real-time insights. Perfect for businesses that need tailored solutions without the complexity of large enterprise software.',
       icon: <Plug className="w-10 h-10 sm:w-12 sm:h-12 text-gold-primary" />,
       features: [
-        'Tool connectivity',
-        'Data synchronization',
-        'Custom API development',
-        'Real-time updates',
-        'Secure authentication'
+        'Custom dashboard design',
+        'Real-time data visualization',
+        'Automated reporting',
+        'Mobile-responsive interfaces',
+        'Integration with existing tools'
       ],
       useCases: [
-        'CRM integrations',
-        'Payment gateway connections',
-        'E-commerce platform sync',
-        'Database connections',
-        'Third-party service integration'
+        'Business analytics dashboards',
+        'Custom admin panels',
+        'Data aggregation tools',
+        'Internal workflow apps',
+        'Reporting and monitoring systems'
       ]
     }
   ]

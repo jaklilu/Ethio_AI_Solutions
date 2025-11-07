@@ -23,8 +23,11 @@ export default function CTASection() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-gold-primary to-neon-cyan bg-clip-text text-transparent">
             Ready to Automate Your Business?
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-10 max-w-2xl mx-auto">
-            Let&apos;s discuss how AI can transform your workflows and help your business grow.
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
+            Stop spending hours on repetitive tasks. Let&apos;s discuss how AI automation can save you time, reduce errors, and help your business run smoother — without enterprise complexity or cost.
+          </p>
+          <p className="text-sm sm:text-base md:text-lg text-gold-primary font-semibold mb-8 sm:mb-10">
+            Get started with a free consultation to explore automation opportunities for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
@@ -32,7 +35,7 @@ export default function CTASection() {
               className="group relative px-6 py-3.5 sm:px-8 sm:py-4 bg-gold-primary text-dark-bg font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 glow-gold text-base sm:text-lg min-h-[48px] flex items-center justify-center gap-2 touch-manipulation w-full sm:w-auto"
             >
               <span className="relative z-10 flex items-center gap-2">
-                Schedule a Consultation
+                Get Started Today
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-gold-primary to-gold-accent opacity-0 group-hover:opacity-100 transition-opacity" />

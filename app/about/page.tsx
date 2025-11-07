@@ -67,13 +67,13 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                AI isn&apos;t just for big companies. At Ethio AI Solutions, we believe that every business, regardless of size, should have access to powerful AI automation tools.
+                We help small businesses unlock automation and AI without enterprise complexity or cost. We build AI agents, automation workflows, and custom dashboards that remove manual work from everyday business operations.
               </p>
-              <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-4 sm:mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                 We specialize in creating affordable, practical AI solutions that help small and mid-sized businesses automate processes, reduce manual work, and compete more effectively. Our goal is to make AI accessible, understandable, and valuable for the businesses that power our economy.
               </p>
               <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed">
-                Whether you&apos;re a solo entrepreneur, a growing startup, or an established small business, we help you leverage AI the same way large enterprises do — without the enterprise price tag.
+                Whether you&apos;re a solo entrepreneur, a growing startup, or an established small business, we bring 25+ years of enterprise IT experience to help you leverage AI the same way large enterprises do — without the enterprise price tag.
               </p>
             </motion.div>
           </Card>
@@ -123,8 +123,35 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder/Team Section */}
+      {/* Credibility Section */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-dark-bg">
+        <div className="max-w-4xl mx-auto">
+          <Card className="p-6 sm:p-8 md:p-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-gold-primary">
+                25+ Years of Enterprise IT Experience
+              </h2>
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed">
+                Before founding Ethio AI Solutions, we spent over two decades designing, supporting, and optimizing enterprise systems for organizations like <strong className="text-gold-primary">Disney</strong>, <strong className="text-gold-primary">Pepperdine University</strong>, and <strong className="text-gold-primary">Justice Telecom</strong>.
+              </p>
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed">
+                We now bring that depth of knowledge — security, compliance, automation, system design, and business operations — to small businesses looking to modernize with AI.
+              </p>
+              <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed">
+                Enterprise expertise. Small business focus. Affordable solutions that deliver real results without enterprise complexity or cost.
+              </p>
+            </motion.div>
+          </Card>
+        </div>
+      </section>
+
+      {/* Founder/Team Section */}
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-dark-surface">
         <div className="max-w-4xl mx-auto">
           <Card className="p-6 sm:p-8 md:p-10">
             <motion.div
@@ -136,10 +163,10 @@ export default function AboutPage() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-gold-primary">
                 Why We Do This
               </h2>
-              <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-4 sm:mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                 Having worked with both large enterprises and small businesses, we&apos;ve seen firsthand how AI can transform operations. However, we also noticed that small businesses were often left behind, unable to access the same powerful tools due to cost and complexity.
               </p>
-              <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-4 sm:mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                 That&apos;s why we founded Ethio AI Solutions — to bridge that gap. We combine deep technical expertise with a focus on practical, affordable solutions. We understand that small businesses need results, not just technology for technology&apos;s sake.
               </p>
               <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed">

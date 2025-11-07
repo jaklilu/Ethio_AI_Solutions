@@ -26,10 +26,10 @@ export default function ServicesSection() {
       features: ['Process optimization', 'Integration setup', 'Time savings', 'Error reduction']
     },
     {
-      title: 'API Integrations',
-      description: 'Connect your tools and systems seamlessly with custom API integrations tailored to your needs.',
+      title: 'Custom Dashboards & Apps',
+      description: 'Build custom dashboards and small applications tailored to your business needs without enterprise complexity.',
       icon: <Plug className="w-8 h-8 sm:w-10 sm:h-10 text-gold-primary" />,
-      features: ['Tool connectivity', 'Data synchronization', 'Custom solutions', 'Seamless workflows']
+      features: ['Custom dashboards', 'Real-time insights', 'Automated reporting', 'Mobile-responsive']
     }
   ]
 

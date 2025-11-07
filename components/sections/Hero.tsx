@@ -33,15 +33,17 @@ export default function Hero() {
 
         {/* Responsive heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-gold-primary via-gold-accent to-neon-cyan bg-clip-text text-transparent leading-tight px-2">
-          AI for Every Business
+          AI Automation for Small Businesses
         </h1>
+
+        {/* Subheadline */}
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6 max-w-3xl mx-auto text-gray-200 px-2">
+          Without the Enterprise Price Tag
+        </p>
 
         {/* Responsive paragraph */}
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
-          We bring enterprise-level AI automation to small and mid-sized businesses.
-          <span className="block mt-2 text-gold-primary text-sm sm:text-base md:text-lg lg:text-xl">
-            Affordable. Practical. Powerful.
-          </span>
+          We build AI agents, workflow automation, and custom small apps that save hours, reduce errors, and help your business run smoother every day.
         </p>
 
         {/* Key Message */}
@@ -51,7 +53,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 md:mb-10 max-w-2xl mx-auto px-4"
         >
-          AI isn&apos;t just for big companies — we bring AI automation to the businesses that actually need it.
+          AI for small businesses, not enterprise budgets — bringing 25+ years of enterprise IT experience to everyday automation solutions.
         </motion.p>
 
         {/* Mobile-optimized buttons - stack on mobile */}
@@ -66,7 +68,7 @@ export default function Hero() {
             className="group relative px-6 py-3.5 sm:px-8 sm:py-4 bg-gold-primary text-dark-bg font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 glow-gold text-base sm:text-lg min-h-[48px] flex items-center justify-center gap-2 touch-manipulation"
           >
             <span className="relative z-10 flex items-center gap-2">
-              Get Started
+              Get Started Today
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-gold-primary to-gold-accent opacity-0 group-hover:opacity-100 transition-opacity" />
