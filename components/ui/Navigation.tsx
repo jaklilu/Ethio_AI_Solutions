@@ -71,7 +71,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-300 hover:text-gold-primary transition-colors p-2 -mr-2 relative z-[70]"
+            className="md:hidden text-gray-300 hover:text-gold-primary transition-colors p-2 -mr-2 relative z-[110]"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
             type="button"
@@ -82,7 +82,7 @@ export default function Navigation() {
       </div>
 
       {/* Mobile Navigation */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {isOpen && (
           <>
             {/* Backdrop */}
@@ -91,19 +91,16 @@ export default function Navigation() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/60 z-[55] md:hidden"
+              className="fixed inset-0 bg-black/70 z-[90] md:hidden"
               aria-hidden="true"
             />
             
             {/* Menu Panel - slides in from right */}
-            <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'tween', duration: 0.3, ease: 'easeOut' }}
-              className="fixed top-14 sm:top-16 right-0 bottom-0 w-80 max-w-[85vw] bg-dark-elevated z-[60] md:hidden shadow-2xl overflow-y-auto"
+            <div
+              className="fixed top-14 sm:top-16 right-0 bottom-0 w-full sm:w-80 max-w-[85vw] bg-dark-elevated z-[100] md:hidden shadow-2xl overflow-y-auto border-l-2 border-gold-primary/30"
               style={{ 
-                WebkitOverflowScrolling: 'touch'
+                WebkitOverflowScrolling: 'touch',
+                animation: 'slideIn 0.3s ease-out'
               }}
             >
               <div className="px-6 py-8 space-y-2">
@@ -118,7 +115,7 @@ export default function Navigation() {
                   </Link>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </>
         )}
       </AnimatePresence>
