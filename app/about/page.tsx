@@ -73,7 +73,7 @@ export default function AboutPage() {
                 We specialize in creating affordable, practical AI solutions that help small and mid-sized businesses automate processes, reduce manual work, and compete more effectively. Our goal is to make AI accessible, understandable, and valuable for the businesses that power our economy.
               </p>
               <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed">
-                Whether you&apos;re a solo entrepreneur, a growing startup, or an established small business, we bring 25+ years of enterprise IT experience to help you leverage AI the same way large enterprises do — without the enterprise price tag.
+                Whether you&apos;re a solo entrepreneur, a growing startup, or an established small business, we bring years of enterprise IT experience to help you leverage AI the same way large enterprises do — without the enterprise price tag.
               </p>
             </motion.div>
           </Card>
