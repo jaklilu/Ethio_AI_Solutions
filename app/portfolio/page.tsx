@@ -17,56 +17,56 @@ interface PortfolioItem {
 export default function PortfolioPage() {
   const portfolioItems: PortfolioItem[] = [
     {
-      title: 'E-commerce Customer Support Automation',
-      description: 'Automated customer service for an online retailer handling 500+ daily inquiries',
-      industry: 'E-commerce',
-      solution: 'Implemented an AI chatbot that handles order inquiries, returns, and product questions 24/7, integrated with their inventory system.',
+      title: 'Mahaber Hosting & Attendance Automation',
+      description: 'Automated hosting sequence and attendance tracking for a 50+ member community',
+      industry: 'Community Management',
+      solution: 'Built a mobile-friendly platform that manages hosting rotation, attendance voting, image uploads, and history tracking. Fully automated using backend APIs and dynamic UI updates.',
       results: [
-        'Reduced response time from hours to seconds',
-        'Handled 80% of inquiries automatically',
-        'Freed up staff for complex issues',
-        'Improved customer satisfaction scores'
+        'Eliminated manual coordination and texting',
+        'Reduced hosting conflicts to zero',
+        'Automated attendance collection',
+        'Provided complete hosting history and rotations'
       ],
-      technologies: ['AI Chatbot', 'API Integration', 'Natural Language Processing']
+      technologies: ['Flask API', 'SQLite', 'PythonAnywhere', 'JavaScript UI', 'Automation']
     },
     {
-      title: 'Restaurant Order Processing System',
-      description: 'Automated order management and kitchen workflow for a restaurant chain',
-      industry: 'Food & Beverage',
-      solution: 'Built an automated system that processes online orders, sends them to the kitchen, tracks preparation time, and notifies customers.',
+      title: 'Bible Bus Participant Automation',
+      description: 'Automated onboarding, reminders, and progress tracking for 300+ seasonal participants',
+      industry: 'Nonprofit / Faith-Based Automation',
+      solution: 'Created an automation pipeline connecting Google Sheets, WhatsApp, YouVersion plans, and email notifications. The system tracks introductions, reading progress, and sends targeted reminders.',
       results: [
-        'Eliminated manual order entry',
-        'Reduced order errors by 95%',
-        'Improved kitchen efficiency',
-        'Increased order capacity by 40%'
+        'Reduced manual tracking by 90%',
+        'Improved participant engagement and completion rates',
+        'Automatically manages new groups every 3 months',
+        'Unified WhatsApp + email + spreadsheet workflow'
       ],
-      technologies: ['Workflow Automation', 'Order Management', 'SMS Notifications']
+      technologies: ['n8n', 'Google Sheets API', 'SendGrid', 'WhatsApp Notifications', 'YouVersion Integration']
     },
     {
-      title: 'Real Estate Lead Management',
-      description: 'Automated lead capture, qualification, and follow-up system',
-      industry: 'Real Estate',
-      solution: 'Created an AI system that captures leads from multiple sources, qualifies them, schedules viewings, and sends automated follow-ups.',
+      title: 'PayPal Invoice & Payment Reconciliation',
+      description: 'End-to-end automation for tracking PayPal invoices, manual payments, and receipts',
+      industry: 'Finance / Operations',
+      solution: 'Built a reconciliation system that fetches PayPal invoices across multiple pages, matches payments from PayPal and bank transfers, generates receipt-upload links, and updates Google Sheets in real time.',
       results: [
-        'Captured 3x more leads',
-        'Automated initial qualification',
-        'Reduced manual data entry',
-        'Improved lead conversion rate'
+        'Consolidated over 1,700 invoices',
+        'Reduced manual bookkeeping from hours to minutes',
+        'Automated receipt submission with a web upload system',
+        'Eliminated duplicate payment checks'
       ],
-      technologies: ['AI Agents', 'CRM Integration', 'Automated Follow-up']
+      technologies: ['PayPal API', 'n8n', 'Google Sheets', 'Custom Receipt Upload Page']
     },
     {
-      title: 'Healthcare Appointment Scheduling',
-      description: 'Intelligent appointment booking and reminder system',
-      industry: 'Healthcare',
-      solution: 'Developed an AI-powered system that handles appointment scheduling, sends reminders, manages cancellations, and optimizes schedules.',
+      title: 'Family Tree Dynamic Profile Engine',
+      description: 'Graphical family tree system with dynamic layouts, admin tools, and image-based navigation',
+      industry: 'Family / Cultural Heritage',
+      solution: 'Developed a visual family tree platform with dynamic relationship rendering (single, married, kids, multiple spouses), admin data entry, image cropping, profile pages, and a future matching-game module.',
       results: [
-        'Reduced no-shows by 60%',
-        'Automated appointment reminders',
-        'Optimized scheduling efficiency',
-        'Improved patient satisfaction'
+        'Centralized 300+ family records',
+        'Simplified relationship management',
+        'Enabled future generations to explore their heritage interactively',
+        'Inspired a gamified "match the faces" educational tool'
       ],
-      technologies: ['AI Agents', 'Calendar Integration', 'SMS Automation']
+      technologies: ['Flask API', 'SQLite', 'Wix Frontend', 'Custom JavaScript', 'Image Processing']
     }
   ]
 
@@ -175,7 +175,7 @@ export default function PortfolioPage() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8">
-              <em>Note: Specific client names and details are kept confidential. These examples represent the types of solutions we deliver.</em>
+              <em>Real projects delivering real results. Ready to automate your business processes?</em>
             </p>
             <Button href="/contact" variant="primary" size="md">
               Discuss Your Project
