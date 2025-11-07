@@ -17,7 +17,7 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Close mobile menu when pressing escape
+  // Close mobile menu when pressing escape (no body scroll lock to prevent freezing)
   useEffect(() => {
     if (!isOpen) return
     
@@ -101,10 +101,9 @@ export default function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.3, ease: 'easeOut' }}
-              className="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-dark-elevated z-[60] md:hidden shadow-2xl overflow-y-auto"
+              className="fixed top-14 sm:top-16 right-0 bottom-0 w-80 max-w-[85vw] bg-dark-elevated z-[60] md:hidden shadow-2xl overflow-y-auto"
               style={{ 
-                WebkitOverflowScrolling: 'touch',
-                paddingTop: '56px'
+                WebkitOverflowScrolling: 'touch'
               }}
             >
               <div className="px-6 py-8 space-y-2">
