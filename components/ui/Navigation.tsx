@@ -17,15 +17,34 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Close mobile menu when clicking outside
+  // Close mobile menu when clicking outside or pressing escape
   useEffect(() => {
     if (isOpen) {
+      // Save current scroll position
+      const scrollY = window.scrollY
+      
+      // Lock body scroll
       document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'unset'
-    }
-    return () => {
-      document.body.style.overflow = 'unset'
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.width = '100%'
+      
+      const handleEscape = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') {
+          setIsOpen(false)
+        }
+      }
+      
+      document.addEventListener('keydown', handleEscape)
+      return () => {
+        document.removeEventListener('keydown', handleEscape)
+        // Restore scroll position
+        document.body.style.overflow = ''
+        document.body.style.position = ''
+        document.body.style.top = ''
+        document.body.style.width = ''
+        window.scrollTo(0, scrollY)
+      }
     }
   }, [isOpen])
 
@@ -66,10 +85,14 @@ export default function Navigation() {
 
           {/* Mobile menu button - larger touch target */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-300 hover:text-gold-primary transition-colors p-2 -mr-2 touch-manipulation"
+            onClick={(e) => {
+              e.stopPropagation()
+              setIsOpen(!isOpen)
+            }}
+            className="md:hidden text-gray-300 hover:text-gold-primary transition-colors p-2 -mr-2 touch-manipulation relative z-[60]"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
+            type="button"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -86,7 +109,9 @@ export default function Navigation() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
+              onTouchStart={() => setIsOpen(false)}
+              className="fixed inset-0 bg-black/50 z-[45] md:hidden"
+              style={{ backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}
             />
             
             {/* Menu */}
@@ -95,7 +120,10 @@ export default function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-14 right-0 bottom-0 left-0 md:hidden bg-dark-elevated z-40 overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+              onTouchStart={(e) => e.stopPropagation()}
+              className="fixed top-14 sm:top-16 right-0 bottom-0 left-0 md:hidden bg-dark-elevated z-[50] overflow-y-auto touch-manipulation"
+              style={{ WebkitOverflowScrolling: 'touch' }}
             >
               <div className="px-6 py-8 space-y-1">
                 {navItems.map((item, index) => (
@@ -107,8 +135,17 @@ export default function Navigation() {
                   >
                     <Link
                       href={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className="block text-gray-300 hover:text-gold-primary transition-colors py-4 px-4 text-lg font-medium border-b border-gold-primary/10 hover:border-gold-primary/30 touch-manipulation min-h-[56px] flex items-center"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        setIsOpen(false)
+                      }}
+                      onTouchStart={(e) => {
+                        e.stopPropagation()
+                      }}
+                      onTouchEnd={() => {
+                        setIsOpen(false)
+                      }}
+                      className="block text-gray-300 hover:text-gold-primary transition-colors py-4 px-4 text-lg font-medium border-b border-gold-primary/10 hover:border-gold-primary/30 touch-manipulation min-h-[56px] flex items-center active:bg-gold-primary/5 select-none"
                     >
                       {item.name}
                     </Link>
