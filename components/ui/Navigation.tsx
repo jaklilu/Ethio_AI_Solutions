@@ -82,36 +82,41 @@ export default function Navigation() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden">
+        <>
           {/* Backdrop */}
           <div
             onClick={() => setIsOpen(false)}
-            className="fixed inset-0 bg-black/70 z-[90]"
+            className="fixed inset-0 bg-black/70 z-[90] md:hidden"
+            style={{ top: '56px' }}
             aria-hidden="true"
           />
           
           {/* Menu Panel - slides in from right */}
           <div
-            className="fixed top-14 sm:top-16 right-0 bottom-0 w-full sm:w-80 max-w-[85vw] bg-dark-elevated z-[100] shadow-2xl overflow-y-auto border-l-2 border-gold-primary/30"
+            className="fixed top-14 right-0 bottom-0 w-full max-w-[85vw] bg-dark-elevated z-[100] md:hidden shadow-2xl overflow-y-auto border-l-2 border-gold-primary"
             style={{ 
               WebkitOverflowScrolling: 'touch',
-              animation: 'slideIn 0.3s ease-out forwards'
+              transform: 'translateX(0)',
+              opacity: 1
             }}
           >
             <div className="px-6 py-8 space-y-2">
+              <div className="mb-4 pb-4 border-b border-gold-primary/20">
+                <h3 className="text-gold-primary text-lg font-bold">Menu</h3>
+              </div>
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="block text-gray-300 hover:text-gold-primary transition-colors py-4 px-4 text-lg font-medium border-b border-gold-primary/10 hover:border-gold-primary/30 active:bg-gold-primary/10 min-h-[56px] flex items-center touch-manipulation"
+                  className="block text-white hover:text-gold-primary transition-colors py-4 px-4 text-lg font-medium border-b border-gold-primary/10 hover:border-gold-primary/30 active:bg-gold-primary/10 min-h-[56px] flex items-center touch-manipulation"
                 >
                   {item.name}
                 </Link>
               ))}
             </div>
           </div>
-        </div>
+        </>
       )}
     </nav>
   )
