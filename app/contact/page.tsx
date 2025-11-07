@@ -141,7 +141,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-sm font-semibold text-gray-400 mb-1">Location</h3>
                       <p className="text-sm sm:text-base text-gray-300">
-                        Addis Ababa, Ethiopia
+                        United States
                       </p>
                     </div>
                   </div>

@@ -452,7 +452,7 @@ ethio-ai-solutions/
 **Company**: Ethio AI Solutions
 **Email**: contact@ethioai.com
 **Phone**: +251 900 000 000
-**Location**: Addis Ababa, Ethiopia
+**Location**: United States
 
 *Note: Update contact information in Footer and Contact page with actual details*
 

@@ -86,7 +86,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.6 }}
           className="mt-8 md:mt-12 text-xs sm:text-sm text-gray-400 px-4"
         >
-          Trusted by businesses across Ethiopia and beyond
+          Trusted by businesses across the US and beyond
         </motion.p>
       </motion.div>
     </section>
