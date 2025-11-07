@@ -17,7 +17,7 @@ interface PortfolioItem {
 export default function PortfolioPage() {
   const portfolioItems: PortfolioItem[] = [
     {
-      title: 'Mahaber Hosting & Attendance Automation',
+      title: 'Attendance Automation',
       description: 'Automated hosting sequence and attendance tracking for a 50+ member community',
       industry: 'Community Management',
       solution: 'Built a mobile-friendly platform that manages hosting rotation, attendance voting, image uploads, and history tracking. Fully automated using backend APIs and dynamic UI updates.',
@@ -30,9 +30,9 @@ export default function PortfolioPage() {
       technologies: ['Flask API', 'SQLite', 'PythonAnywhere', 'JavaScript UI', 'Automation']
     },
     {
-      title: 'Bible Bus Participant Automation',
+      title: 'Automation Workflow',
       description: 'Automated onboarding, reminders, and progress tracking for 300+ seasonal participants',
-      industry: 'Nonprofit / Faith-Based Automation',
+      industry: 'Nonprofit',
       solution: 'Created an automation pipeline connecting Google Sheets, WhatsApp, YouVersion plans, and email notifications. The system tracks introductions, reading progress, and sends targeted reminders.',
       results: [
         'Reduced manual tracking by 90%',
@@ -40,7 +40,7 @@ export default function PortfolioPage() {
         'Automatically manages new groups every 3 months',
         'Unified WhatsApp + email + spreadsheet workflow'
       ],
-      technologies: ['n8n', 'Google Sheets API', 'SendGrid', 'WhatsApp Notifications', 'YouVersion Integration']
+      technologies: ['n8n', 'Google Sheets API', 'SendGrid', 'WhatsApp Notifications', 'YouVersion Integration', 'Netlify', 'Render']
     },
     {
       title: 'PayPal Invoice & Payment Reconciliation',
