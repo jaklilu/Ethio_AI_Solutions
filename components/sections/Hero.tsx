@@ -73,14 +73,6 @@ export default function Hero() {
           </Link>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="mt-8 md:mt-12 text-xs sm:text-sm text-gray-400 px-4"
-        >
-          Trusted by businesses across the US and beyond
-        </motion.p>
       </motion.div>
     </section>
   )
