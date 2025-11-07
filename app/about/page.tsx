@@ -134,13 +134,16 @@ export default function AboutPage() {
                 Why We Do This
               </h2>
               <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                Having worked with both large enterprises and small businesses, we&apos;ve seen firsthand how AI can transform operations. However, we also noticed that small businesses were often left behind, unable to access the same powerful tools due to cost and complexity.
+                Working with both large enterprises and small businesses has shown us something important: AI can transform the way organizations operate — but small businesses are often left behind due to cost, complexity, and lack of accessible expertise.
               </p>
               <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                That&apos;s why we founded Ethio AI Solutions — to bridge that gap. We combine deep technical expertise with a focus on practical, affordable solutions. We understand that small businesses need results, not just technology for technology&apos;s sake.
+                That gap is why we founded Ethio AI Solutions. We bring a holistic understanding of systems — from infrastructure and data flow to cloud applications and human workflows — and apply it in a way that&apos;s simple, practical, and results-driven.
               </p>
-              <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed">
-                Every solution we build is designed with your business in mind: clear ROI, quick implementation, and real impact. Because when your business succeeds, we succeed.
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed">
+                Small businesses don&apos;t need technology for technology&apos;s sake. They need clear ROI, quick wins, and automation that fits naturally into their existing workflow. Our job is to deliver exactly that: solutions that reduce manual work, eliminate bottlenecks, and have real impact from day one.
+              </p>
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
+                When your business succeeds, we succeed.
               </p>
             </motion.div>
           </Card>
