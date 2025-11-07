@@ -66,14 +66,11 @@ export default function AboutPage() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-gold-primary">
                 Our Mission
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                We help small businesses unlock automation and AI without enterprise complexity or cost. We build AI agents, automation workflows, and custom dashboards that remove manual work from everyday business operations.
-              </p>
               <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                We specialize in creating affordable, practical AI solutions that help small and mid-sized businesses automate processes, reduce manual work, and compete more effectively. Our goal is to make AI accessible, understandable, and valuable for the businesses that power our economy.
+                Our mission is to bring practical, affordable AI automation to small and mid-sized businesses. We combine deep technical expertise across compute, networking, storage, cloud applications, and secure infrastructure with a clear focus on real-world operations.
               </p>
-              <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed">
-                Whether you&apos;re a solo entrepreneur, a growing startup, or an established small business, we bring years of enterprise IT experience to help you leverage AI the same way large enterprises do — without the enterprise price tag.
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
+                We believe AI should remove friction, simplify everyday work, and create measurable value — not add complexity. Every solution we build is designed to be stable, efficient, and aligned with how your business actually runs, so you can move faster with confidence.
               </p>
             </motion.div>
           </Card>
