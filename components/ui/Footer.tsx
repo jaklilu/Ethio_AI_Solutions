@@ -34,7 +34,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-4 group">
               <Brain className="w-6 h-6 text-gold-primary group-hover:rotate-12 transition-transform" />
               <span className="text-xl font-bold">
-                <span className="text-green-primary">Ethio</span>{' '}
+                <span className="text-neon-green">Ethio</span>{' '}
                 <span className="text-gold-primary">AI</span>{' '}
                 <span className="text-red-primary">Solutions</span>
               </span>
@@ -130,7 +130,7 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-xs sm:text-sm text-gray-500 text-center sm:text-left">
               © {currentYear}{' '}
-              <span className="text-green-primary">Ethio</span>{' '}
+              <span className="text-neon-green">Ethio</span>{' '}
               <span className="text-gold-primary">AI</span>{' '}
               <span className="text-red-primary">Solutions</span>. All rights reserved.
             </p>

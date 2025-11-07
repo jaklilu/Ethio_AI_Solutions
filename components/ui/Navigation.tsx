@@ -50,7 +50,7 @@ export default function Navigation() {
             <Link href="/" className="flex items-center gap-1.5 sm:gap-2 group flex-shrink-0">
               <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-gold-primary group-hover:rotate-12 transition-transform" />
               <span className="text-lg sm:text-xl font-bold whitespace-nowrap">
-                <span className="text-green-primary">Ethio</span>{' '}
+                <span className="text-neon-green">Ethio</span>{' '}
                 <span className="text-gold-primary">AI</span>{' '}
                 <span className="text-red-primary">Solutions</span>
               </span>

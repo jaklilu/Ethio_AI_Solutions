@@ -22,6 +22,7 @@ const config: Config = {
         neon: {
           cyan: '#00ffff',
           purple: '#b026ff',
+          green: '#39ff14', // neon green
         },
         green: {
           primary: '#10b981', // emerald-500
