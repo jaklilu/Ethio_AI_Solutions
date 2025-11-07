@@ -95,25 +95,65 @@ export default function Navigation() {
           
           {/* Menu Panel */}
           <div
-            className="fixed top-14 right-0 bottom-0 w-full max-w-[85vw] bg-dark-elevated z-[100] md:hidden shadow-2xl overflow-y-auto border-l-2 border-gold-primary"
+            className="fixed top-14 right-0 w-full max-w-[85vw] bg-gradient-to-b from-dark-elevated via-dark-elevated to-dark-surface z-[100] md:hidden shadow-2xl border-l-2 border-gold-primary/50 rounded-tl-lg"
             style={{ 
               WebkitOverflowScrolling: 'touch',
               transform: 'translateX(0)',
-              opacity: 1
+              opacity: 1,
+              boxShadow: '-4px 0 20px rgba(255, 215, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.5)'
             }}
           >
-            <div className="px-6 py-8 space-y-2">
-              <div className="mb-4 pb-4 border-b border-gold-primary/20">
-                <h3 className="text-gold-primary text-lg font-bold">Menu</h3>
+            {/* Glow effect on left border */}
+            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold-primary via-gold-primary/80 to-transparent blur-sm" />
+            
+            {/* Top accent line */}
+            <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold-primary/50 to-transparent" />
+            
+            <div className="px-6 py-6 pb-8 space-y-1">
+              {/* Menu Header */}
+              <div className="mb-6 pb-4 border-b border-gold-primary/30 relative">
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-primary/50 to-transparent" />
+                <div className="flex items-center gap-3">
+                  <div className="relative">
+                    <div className="w-1 h-6 bg-gradient-to-b from-gold-primary to-gold-accent rounded-full" />
+                    <div className="absolute inset-0 w-1 h-6 bg-gold-primary/50 blur-md rounded-full animate-pulse-slow" />
+                  </div>
+                  <h3 className="text-gold-primary text-xl font-bold bg-gradient-to-r from-gold-primary via-gold-accent to-gold-primary bg-clip-text text-transparent bg-[length:200%_100%] animate-[shimmer_3s_ease-in-out_infinite]">
+                    Navigation
+                  </h3>
+                </div>
               </div>
-              {navItems.map((item) => (
+              
+              {/* Menu Items */}
+              {navItems.map((item, index) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="block text-white hover:text-gold-primary transition-colors py-4 px-4 text-lg font-medium border-b border-gold-primary/10 hover:border-gold-primary/30 active:bg-gold-primary/10 min-h-[56px] flex items-center touch-manipulation"
+                  className="group relative block text-gray-300 hover:text-gold-primary transition-all duration-300 py-4 px-4 rounded-lg hover:bg-gold-primary/10 hover:pl-6 active:bg-gold-primary/20 min-h-[56px] flex items-center touch-manipulation border border-transparent hover:border-gold-primary/20"
+                  style={{
+                    animationDelay: `${index * 50}ms`
+                  }}
                 >
-                  {item.name}
+                  {/* Hover indicator line */}
+                  <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-gradient-to-b from-gold-primary to-gold-accent rounded-r-full group-hover:h-8 transition-all duration-300 group-hover:shadow-[0_0_8px_rgba(255,215,0,0.5)]" />
+                  
+                  {/* Item content */}
+                  <span className="text-base font-medium relative z-10 flex items-center gap-3">
+                    <span className="relative">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold-primary/50 group-hover:bg-gold-primary group-hover:scale-150 transition-all duration-300 block" />
+                      <span className="absolute inset-0 w-1.5 h-1.5 rounded-full bg-gold-primary/0 group-hover:bg-gold-primary/50 group-hover:scale-[2.5] blur-sm transition-all duration-300" />
+                    </span>
+                    <span className="relative">
+                      {item.name}
+                      <span className="absolute bottom-0 left-0 w-0 h-px bg-gold-primary group-hover:w-full transition-all duration-300" />
+                    </span>
+                  </span>
+                  
+                  {/* Arrow on hover */}
+                  <span className="ml-auto text-gold-primary/0 group-hover:text-gold-primary transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 text-lg font-bold">
+                    →
+                  </span>
                 </Link>
               ))}
             </div>

@@ -109,11 +109,13 @@ select {
   }
 }
 
-/* Ensure mobile menu is always visible when open */
-@media (max-width: 767px) {
-  [data-menu-open="true"] {
-    display: block !important;
-    visibility: visible !important;
+/* Shimmer animation for text */
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }
 
