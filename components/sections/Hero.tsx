@@ -33,7 +33,7 @@ export default function Hero() {
 
         {/* Responsive heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-gold-primary via-gold-accent to-neon-cyan bg-clip-text text-transparent leading-tight px-2">
-          AI Automation for Small Businesses
+          AI Solutions for Small Businesses
         </h1>
 
         {/* Subheadline */}
