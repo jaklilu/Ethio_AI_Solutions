@@ -46,15 +46,6 @@ export default function Hero() {
           We build AI agents, workflow automation, and custom small apps that save hours, reduce errors, and help your business run smoother every day.
         </p>
 
-        {/* Key Message */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 md:mb-10 max-w-2xl mx-auto px-4"
-        >
-          AI for small businesses, not enterprise budgets — bringing 25+ years of enterprise IT experience to everyday automation solutions.
-        </motion.p>
 
         {/* Mobile-optimized buttons - stack on mobile */}
         <motion.div
