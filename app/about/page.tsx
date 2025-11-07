@@ -123,33 +123,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Credibility Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-dark-bg">
-        <div className="max-w-4xl mx-auto">
-          <Card className="p-6 sm:p-8 md:p-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-gold-primary">
-                25+ Years of Enterprise IT Experience
-              </h2>
-              <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                Before founding Ethio AI Solutions, we spent over two decades designing, supporting, and optimizing enterprise systems for organizations like <strong className="text-gold-primary">Disney</strong>, <strong className="text-gold-primary">Pepperdine University</strong>, and <strong className="text-gold-primary">Justice Telecom</strong>.
-              </p>
-              <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                We now bring that depth of knowledge — security, compliance, automation, system design, and business operations — to small businesses looking to modernize with AI.
-              </p>
-              <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed">
-                Enterprise expertise. Small business focus. Affordable solutions that deliver real results without enterprise complexity or cost.
-              </p>
-            </motion.div>
-          </Card>
-        </div>
-      </section>
-
       {/* Founder/Team Section */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-dark-surface">
         <div className="max-w-4xl mx-auto">
