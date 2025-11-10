@@ -124,10 +124,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-sm font-semibold text-gray-400 mb-1">Phone</h3>
                       <a
-                        href="tel:+251900000000"
+                        href="tel:+13239919373"
                         className="text-sm sm:text-base text-gold-primary hover:underline touch-manipulation"
                       >
-                        +251 900 000 000
+                        (323) 991-9373
                       </a>
                     </div>
                   </div>
@@ -223,7 +223,7 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 bg-dark-elevated border border-gold-primary/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gold-primary focus:ring-2 focus:ring-gold-primary/20 transition-all text-base touch-manipulation"
-                        placeholder="+251 900 000 000"
+                        placeholder="(323) 991-9373"
                       />
                     </div>
 
