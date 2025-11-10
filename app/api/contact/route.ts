@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import sgMail from '@sendgrid/mail'
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,29 +14,53 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // TODO: Integrate with your email service (SendGrid, Resend, etc.)
-    // TODO: Connect to your Render backend API
-    // For now, this is a placeholder that returns success
-    
-    // Example: Send to your Render backend
-    // const response = await fetch(`${process.env.BACKEND_URL}/api/contact`, {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ name, email, phone, company, message }),
-    // })
+    const apiKey = process.env.SENDGRID_API_KEY
+    const fromEmail = process.env.SENDGRID_FROM_EMAIL
+    const toEmail = process.env.SENDGRID_TO_EMAIL ?? 'contact@ethioaisolutions.com'
 
-    // Log the contact form submission (in production, send to your backend)
-    console.log('Contact form submission:', {
-      name,
-      email,
-      phone,
-      company,
+    if (!apiKey || !fromEmail) {
+      console.error('SendGrid environment variables missing.')
+      return NextResponse.json(
+        { error: 'Email service not configured' },
+        { status: 500 }
+      )
+    }
+
+    sgMail.setApiKey(apiKey)
+
+    const plainText = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      phone ? `Phone: ${phone}` : '',
+      company ? `Company: ${company}` : '',
+      '',
+      'Message:',
       message,
-      timestamp: new Date().toISOString(),
+    ]
+      .filter(Boolean)
+      .join('\n')
+
+    const htmlBody = `
+      <h2>New Contact Form Submission</h2>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
+      ${company ? `<p><strong>Company:</strong> ${company}</p>` : ''}
+      <p><strong>Message:</strong></p>
+      <p>${message.replace(/\n/g, '<br />')}</p>
+    `
+
+    await sgMail.send({
+      to: toEmail,
+      from: fromEmail,
+      replyTo: email,
+      subject: `New contact form submission from ${name}`,
+      text: plainText,
+      html: htmlBody,
     })
 
     return NextResponse.json(
-      { message: 'Message received successfully' },
+      { message: 'Message sent successfully' },
       { status: 200 }
     )
   } catch (error) {

@@ -78,11 +78,22 @@ npm run dev
 
 ## Contact Form Integration
 
-The contact form is set up to send to `/api/contact`. To integrate with your Render backend:
+The contact form posts to `/api/contact` and uses SendGrid to deliver submissions.
 
-1. Update `app/api/contact/route.ts` with your backend URL
-2. Set environment variable `BACKEND_URL` in Netlify
-3. Configure your backend to handle contact form submissions
+### Configure SendGrid
+
+1. Create a SendGrid account and generate an API key with Mail Send permissions.
+2. Add the following environment variables (in `.env.local`, Netlify, and Render):
+   ```bash
+   SENDGRID_API_KEY=your_sendgrid_api_key
+   SENDGRID_FROM_EMAIL=notifications@yourdomain.com
+   # Optional - defaults to contact@ethioaisolutions.com
+   SENDGRID_TO_EMAIL=contact@ethioaisolutions.com
+   ```
+3. Ensure the `SENDGRID_FROM_EMAIL` address is verified in your SendGrid account.
+4. Deploy after adding the variables so the serverless function can access them.
+
+You can update the SendGrid logic in `app/api/contact/route.ts` to meet custom requirements (e.g., logging to a CRM or Render backend).
 
 ## Customization
 

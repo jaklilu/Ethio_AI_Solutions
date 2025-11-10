@@ -67,7 +67,7 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                Our mission is to bring practical, affordable AI automation to small and mid-sized businesses. We combine deep technical expertise across compute, networking, storage, cloud applications, and secure infrastructure with a clear focus on real-world operations.
+                Our mission is to bring practical, affordable AI solutions to small and mid-sized businesses. We combine deep technical expertise across compute, networking, storage, cloud applications, and secure infrastructure with a clear focus on real-world operations.
               </p>
               <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
                 We believe AI should remove friction, simplify everyday work, and create measurable value — not add complexity. Every solution we build is designed to be stable, efficient, and aligned with how your business actually runs, so you can move faster with confidence.
