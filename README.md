@@ -122,5 +122,5 @@ Private - All rights reserved
 
 ## Support
 
-For questions or support, contact: contact@ethioai.com
+For questions or support, contact: contact@ethioaisolutions.com
 

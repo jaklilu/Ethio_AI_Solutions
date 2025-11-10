@@ -498,7 +498,7 @@ ethio-ai-solutions/
 ## Contact Information
 
 **Company**: Ethio AI Solutions
-**Email**: contact@ethioai.com
+**Email**: contact@ethioaisolutions.com
 **Phone**: (323) 991-9373
 **Location**: United States
 

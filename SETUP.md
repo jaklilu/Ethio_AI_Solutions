@@ -99,5 +99,5 @@ Edit `tailwind.config.ts`:
 
 ## Need Help?
 
-Contact: contact@ethioai.com
+Contact: contact@ethioaisolutions.com
 

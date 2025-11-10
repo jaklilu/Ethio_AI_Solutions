@@ -107,10 +107,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-sm font-semibold text-gray-400 mb-1">Email</h3>
                       <a
-                        href="mailto:contact@ethioai.com"
+                        href="mailto:contact@ethioaisolutions.com"
                         className="text-sm sm:text-base text-gold-primary hover:underline touch-manipulation"
                       >
-                        contact@ethioai.com
+                        contact@ethioaisolutions.com
                       </a>
                     </div>
                   </div>

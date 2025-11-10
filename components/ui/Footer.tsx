@@ -99,11 +99,11 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:contact@ethioai.com"
+                  href="mailto:contact@ethioaisolutions.com"
                   className="flex items-center gap-2 text-sm text-gray-400 hover:text-gold-primary transition-colors touch-manipulation"
                 >
                   <Mail className="w-4 h-4" />
-                  contact@ethioai.com
+                  contact@ethioaisolutions.com
                 </a>
               </li>
               <li>
