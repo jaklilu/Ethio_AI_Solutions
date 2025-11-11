@@ -3,8 +3,9 @@
 import Link from 'next/link'
 import { Brain, Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react'
 
+const COPYRIGHT_YEAR = 2023
+
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
 
   const footerLinks = {
     services: [
@@ -129,7 +130,7 @@ export default function Footer() {
         <div className="mt-8 sm:mt-12 pt-8 border-t border-gold-primary/10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-xs sm:text-sm text-gray-500 text-center sm:text-left">
-              © {currentYear}{' '}
+              © {COPYRIGHT_YEAR}{' '}
               <span className="text-neon-green">Ethio</span>{' '}
               <span className="text-gold-primary">AI</span>{' '}
               <span className="text-red-primary">Solutions</span>. All rights reserved.
