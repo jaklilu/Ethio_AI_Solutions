@@ -119,10 +119,10 @@ Built a modern, futuristic website/webapp for Ethio AI Solutions - a consultancy
 #### Contact Form API (`app/api/contact/route.ts`):
 - POST endpoint for contact form submissions
 - Input validation
-- SendGrid integration for email delivery
-- Environment variables: `SENDGRID_API_KEY`, `SENDGRID_FROM_EMAIL`, optional `SENDGRID_TO_EMAIL`
+- Gmail SMTP (Nodemailer) integration for email delivery
+- Environment variables: `GMAIL_USER`, `GMAIL_APP_PASSWORD`, optional `GMAIL_TO_EMAIL`
 - Sends submissions to `contact@ethioaisolutions.com` by default
-- Error handling (logs and returns appropriate responses)
+- Error handling with detailed logging and responses
 
 ### 5. Components
 
@@ -589,7 +589,7 @@ ethio-ai-solutions/
 ### Technical Improvements
 1. **Mobile Menu**: Fixed freezing issues, improved z-index management, better mobile animations
 2. **Color System**: Added green, red, and neon-green colors to Tailwind config
-3. **SendGrid Integration**: Contact form now sends messages via SendGrid (`/api/contact`)
+3. **Email Delivery**: Contact form now sends messages via Gmail SMTP (Nodemailer) in `/api/contact`
 4. **Component Organization**: Added Industries section component
 
 ---

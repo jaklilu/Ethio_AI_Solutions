@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import sgMail from '@sendgrid/mail'
+import nodemailer from 'nodemailer'
 
 export const runtime = 'nodejs'
 
@@ -16,19 +16,25 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const apiKey = process.env.SENDGRID_API_KEY
-    const fromEmail = process.env.SENDGRID_FROM_EMAIL
-    const toEmail = process.env.SENDGRID_TO_EMAIL ?? 'contact@ethioaisolutions.com'
+    const gmailUser = process.env.GMAIL_USER
+    const gmailAppPassword = process.env.GMAIL_APP_PASSWORD
+    const toEmail = process.env.GMAIL_TO_EMAIL ?? 'contact@ethioaisolutions.com'
 
-    if (!apiKey || !fromEmail) {
-      console.error('SendGrid environment variables missing.')
+    if (!gmailUser || !gmailAppPassword) {
+      console.error('Gmail environment variables missing.')
       return NextResponse.json(
         { error: 'Email service not configured' },
         { status: 500 }
       )
     }
 
-    sgMail.setApiKey(apiKey)
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: gmailUser,
+        pass: gmailAppPassword,
+      },
+    })
 
     const plainText = [
       `Name: ${name}`,
@@ -52,9 +58,9 @@ export async function POST(request: NextRequest) {
       <p>${message.replace(/\n/g, '<br />')}</p>
     `
 
-    await sgMail.send({
+    await transporter.sendMail({
+      from: `"Ethio AI Solutions" <${gmailUser}>`,
       to: toEmail,
-      from: fromEmail,
       replyTo: email,
       subject: `New contact form submission from ${name}`,
       text: plainText,
@@ -66,21 +72,18 @@ export async function POST(request: NextRequest) {
       { status: 200 }
     )
   } catch (error: any) {
-    const sendGridError =
-      error?.response?.body?.errors?.[0]?.message ??
-      error?.message ??
-      'Unknown error'
+    const smtpError = error?.response ?? error?.message ?? 'Unknown error'
 
     console.error('Error processing contact form:', {
       message: error?.message,
-      ...(error?.response?.body && { response: error.response.body }),
+      response: error?.response,
     })
 
     return NextResponse.json(
       {
         error:
           'Failed to send your message. Please verify email configuration or try again later.',
-        details: sendGridError,
+        details: smtpError,
       },
       { status: 500 }
     )

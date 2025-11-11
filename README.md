@@ -78,22 +78,22 @@ npm run dev
 
 ## Contact Form Integration
 
-The contact form posts to `/api/contact` and uses SendGrid to deliver submissions.
+The contact form posts to `/api/contact` and uses Gmail SMTP (via Nodemailer) to deliver submissions.
 
-### Configure SendGrid
+### Configure Gmail SMTP
 
-1. Create a SendGrid account and generate an API key with Mail Send permissions.
-2. Add the following environment variables (in `.env.local`, Netlify, and Render):
+1. Enable 2-Step Verification on the Gmail account you want to send from.
+2. Generate an App Password (Google Account > Security > App Passwords).
+3. Add the following environment variables (in `.env.local`, Netlify, and Render):
    ```bash
-   SENDGRID_API_KEY=your_sendgrid_api_key
-   SENDGRID_FROM_EMAIL=notifications@yourdomain.com
+   GMAIL_USER=yourgmailaddress@gmail.com
+   GMAIL_APP_PASSWORD=your_generated_app_password
    # Optional - defaults to contact@ethioaisolutions.com
-   SENDGRID_TO_EMAIL=contact@ethioaisolutions.com
+   GMAIL_TO_EMAIL=contact@ethioaisolutions.com
    ```
-3. Ensure the `SENDGRID_FROM_EMAIL` address is verified in your SendGrid account.
 4. Deploy after adding the variables so the serverless function can access them.
 
-You can update the SendGrid logic in `app/api/contact/route.ts` to meet custom requirements (e.g., logging to a CRM or Render backend).
+You can update the Nodemailer logic in `app/api/contact/route.ts` to meet custom requirements (e.g., logging to a CRM or Render backend).
 
 ## Customization
 
