@@ -108,18 +108,18 @@ export default function ContactPage() {
               >
                 <Card className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-gold-primary/10 rounded-lg flex-shrink-0">
-                      <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-gold-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-sm font-semibold text-gray-400 mb-1">Email</h3>
-                      <a
-                        href="mailto:contact@ethioaisolutions.com"
-                        className="text-sm sm:text-base text-gold-primary hover:underline touch-manipulation"
-                      >
-                        contact@ethioaisolutions.com
-                      </a>
-                    </div>
+                    <a
+                      href="mailto:contact@ethioaisolutions.com"
+                      className="flex items-start gap-4 text-sm sm:text-base text-gold-primary hover:text-gold-accent transition-colors touch-manipulation"
+                    >
+                      <div className="p-3 bg-gold-primary/10 rounded-lg flex-shrink-0">
+                        <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-gold-primary" />
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-semibold text-gray-400 mb-1">Email</h3>
+                        <span className="block">contact@ethioaisolutions.com</span>
+                      </div>
+                    </a>
                   </div>
                 </Card>
 
