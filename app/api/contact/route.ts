@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import sgMail from '@sendgrid/mail'
 
+export const runtime = 'nodejs'
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -63,10 +65,23 @@ export async function POST(request: NextRequest) {
       { message: 'Message sent successfully' },
       { status: 200 }
     )
-  } catch (error) {
-    console.error('Error processing contact form:', error)
+  } catch (error: any) {
+    const sendGridError =
+      error?.response?.body?.errors?.[0]?.message ??
+      error?.message ??
+      'Unknown error'
+
+    console.error('Error processing contact form:', {
+      message: error?.message,
+      ...(error?.response?.body && { response: error.response.body }),
+    })
+
     return NextResponse.json(
-      { error: 'Failed to process request' },
+      {
+        error:
+          'Failed to send your message. Please verify email configuration or try again later.',
+        details: sendGridError,
+      },
       { status: 500 }
     )
   }

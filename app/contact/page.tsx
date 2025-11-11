@@ -16,15 +16,15 @@ export default function ContactPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus('idle')
+    setErrorMessage(null)
 
     try {
-      // TODO: Replace with your actual API endpoint when backend is ready
-      // For now, this is a placeholder
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -44,21 +44,28 @@ export default function ContactPage() {
         })
       } else {
         setSubmitStatus('error')
+        const data = await response.json().catch(() => null)
+        setErrorMessage(
+          data?.error ??
+            'Something went wrong while sending your message. Please try again or email us directly.'
+        )
+        if (data?.details) {
+          console.error('Contact form error details:', data.details)
+        }
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error submitting form:', error)
-      // For development: show success even if API doesn't exist yet
-      setSubmitStatus('success')
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: ''
-      })
+      setSubmitStatus('error')
+      setErrorMessage(
+        error?.message ??
+          'Something went wrong while sending your message. Please try again or email us directly.'
+      )
     } finally {
       setIsSubmitting(false)
-      setTimeout(() => setSubmitStatus('idle'), 5000)
+      setTimeout(() => {
+        setSubmitStatus('idle')
+        setErrorMessage(null)
+      }, 8000)
     }
   }
 
@@ -176,7 +183,8 @@ export default function ContactPage() {
                       animate={{ opacity: 1, y: 0 }}
                       className="p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm sm:text-base"
                     >
-                      Something went wrong. Please try again or email us directly.
+                      {errorMessage ??
+                        'Something went wrong. Please try again or email us directly.'}
                     </motion.div>
                   )}
 
