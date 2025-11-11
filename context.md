@@ -23,6 +23,7 @@ Built a modern, futuristic website/webapp for Ethio AI Solutions - a consultancy
   - TailwindCSS
   - Framer Motion
   - Lucide React (icons)
+  - Nodemailer (Gmail SMTP integration)
   - clsx & tailwind-merge (utilities)
 
 - `tsconfig.json` - TypeScript configuration with path aliases
@@ -44,6 +45,7 @@ Built a modern, futuristic website/webapp for Ethio AI Solutions - a consultancy
 - `.eslintrc.json` - ESLint configuration
 - `.gitignore` - Git ignore patterns
 - `netlify.toml` - Netlify deployment configuration
+- `@types/nodemailer` - Type definitions for Nodemailer
 
 ### 2. Core Application Files
 
