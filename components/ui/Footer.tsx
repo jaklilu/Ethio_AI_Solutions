@@ -41,7 +41,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-gray-400 mb-4 leading-relaxed">
-              Bringing enterprise-level AI automation to small and mid-sized businesses. Affordable. Practical. Powerful.
+              Bringing enterprise-level AI solutions to small and mid-sized businesses. Affordable. Practical. Powerful.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => {
