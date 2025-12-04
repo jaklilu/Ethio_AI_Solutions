@@ -7,7 +7,7 @@ import NeuralMesh from '@/components/animations/NeuralMesh'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden neural-bg px-4 pt-20 pb-12">
+    <section className="relative min-h-[85vh] sm:min-h-[80vh] flex items-center justify-center overflow-hidden neural-bg px-4 pt-20 pb-8 sm:pb-12">
       {/* Animated background elements - reduced on mobile */}
       <div className="absolute inset-0 overflow-hidden">
         <NeuralMesh />
@@ -42,7 +42,7 @@ export default function Hero() {
         </p>
 
         {/* Responsive paragraph */}
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-4 sm:mb-6 max-w-3xl mx-auto leading-relaxed px-2">
           We build AI agents, workflow automation, and custom small apps that save hours, reduce errors, and help your business run smoother every day.
         </p>
 
