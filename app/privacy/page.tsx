@@ -224,7 +224,11 @@ export default function PrivacyPolicyPage() {
               </p>
               <div className="bg-dark-elevated border border-gold-primary/20 rounded-lg p-6 mt-4">
                 <p className="text-base sm:text-lg text-gray-300">
-                  <strong className="text-gold-primary">Ethio AI Solutions</strong>
+                  <strong>
+                    <span className="text-neon-green">Ethio</span>{' '}
+                    <span className="text-gold-primary">AI</span>{' '}
+                    <span className="text-red-primary">Solutions</span>
+                  </strong>
                 </p>
                 <p className="text-base sm:text-lg text-gray-400 mt-2">
                   Email: <a href="mailto:contact@ethioaisolutions.com" className="text-gold-primary hover:text-gold-accent">contact@ethioaisolutions.com</a>
