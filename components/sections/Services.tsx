@@ -34,7 +34,7 @@ export default function ServicesSection() {
   ]
 
   return (
-    <section id="services" className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-dark-surface">
+    <section id="services" className="pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 bg-dark-surface">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

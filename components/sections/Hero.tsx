@@ -7,7 +7,7 @@ import NeuralMesh from '@/components/animations/NeuralMesh'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[85vh] sm:min-h-[80vh] flex items-center justify-center overflow-hidden neural-bg px-4 pt-20 pb-8 sm:pb-12">
+    <section className="relative min-h-[70vh] sm:min-h-[65vh] flex items-center justify-center overflow-hidden neural-bg px-4 pt-20 pb-4 sm:pb-6">
       {/* Animated background elements - reduced on mobile */}
       <div className="absolute inset-0 overflow-hidden">
         <NeuralMesh />
@@ -25,24 +25,24 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-gold-glow/20 border border-gold-primary/30 mb-4 md:mb-6"
+          className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-gold-glow/20 border border-gold-primary/30 mb-3 md:mb-4"
         >
           <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-gold-primary" />
           <span className="text-xs md:text-sm text-gold-primary">AI-Powered Solutions</span>
         </motion.div>
 
         {/* Responsive heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-gold-primary via-gold-accent to-neon-cyan bg-clip-text text-transparent leading-tight px-2">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 md:mb-4 bg-gradient-to-r from-gold-primary via-gold-accent to-neon-cyan bg-clip-text text-transparent leading-tight px-2">
           AI Solutions for Small Businesses
         </h1>
 
         {/* Subheadline */}
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6 max-w-3xl mx-auto text-gray-200 px-2">
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-3 md:mb-4 max-w-3xl mx-auto text-gray-200 px-2">
           Without the Enterprise Price Tag
         </p>
 
         {/* Responsive paragraph */}
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-4 sm:mb-6 max-w-3xl mx-auto leading-relaxed px-2">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-3 sm:mb-4 md:mb-5 max-w-3xl mx-auto leading-relaxed px-2">
           We build AI agents, workflow automation, and custom small apps that save hours, reduce errors, and help your business run smoother every day.
         </p>
 
