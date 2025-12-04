@@ -42,7 +42,7 @@ export default function TermsOfServicePage() {
             >
               <h2 className="text-2xl sm:text-3xl font-bold text-gold-primary mb-4">1. Acceptance of Terms</h2>
               <p className="text-base sm:text-lg leading-relaxed">
-                By accessing and using the Ethio AI Solutions website and services, you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to abide by the above, please do not use this service.
+                By accessing and using the <span className="text-neon-green">Ethio</span>{' '}<span className="text-gold-primary">AI</span>{' '}<span className="text-red-primary">Solutions</span> website and services, you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to abide by the above, please do not use this service.
               </p>
             </motion.div>
 
@@ -55,7 +55,7 @@ export default function TermsOfServicePage() {
             >
               <h2 className="text-2xl sm:text-3xl font-bold text-gold-primary mb-4">2. Description of Services</h2>
               <p className="text-base sm:text-lg leading-relaxed">
-                Ethio AI Solutions provides AI automation services, including but not limited to:
+                <span className="text-neon-green">Ethio</span>{' '}<span className="text-gold-primary">AI</span>{' '}<span className="text-red-primary">Solutions</span> provides AI automation services, including but not limited to:
               </p>
               <ul className="list-disc list-inside space-y-2 text-base sm:text-lg ml-4">
                 <li>AI agent development and deployment</li>
@@ -98,7 +98,7 @@ export default function TermsOfServicePage() {
             >
               <h2 className="text-2xl sm:text-3xl font-bold text-gold-primary mb-4">4. Intellectual Property</h2>
               <p className="text-base sm:text-lg leading-relaxed">
-                All content, features, and functionality of our services, including but not limited to text, graphics, logos, icons, images, and software, are the exclusive property of Ethio AI Solutions or its licensors and are protected by United States and international copyright, trademark, and other intellectual property laws.
+                All content, features, and functionality of our services, including but not limited to text, graphics, logos, icons, images, and software, are the exclusive property of <span className="text-neon-green">Ethio</span>{' '}<span className="text-gold-primary">AI</span>{' '}<span className="text-red-primary">Solutions</span> or its licensors and are protected by United States and international copyright, trademark, and other intellectual property laws.
               </p>
               <p className="text-base sm:text-lg leading-relaxed mt-4">
                 You may not reproduce, distribute, modify, create derivative works of, publicly display, or otherwise use our proprietary content without our express written permission.
@@ -155,7 +155,7 @@ export default function TermsOfServicePage() {
             >
               <h2 className="text-2xl sm:text-3xl font-bold text-gold-primary mb-4">7. Limitation of Liability</h2>
               <p className="text-base sm:text-lg leading-relaxed">
-                To the fullest extent permitted by applicable law, Ethio AI Solutions shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from:
+                To the fullest extent permitted by applicable law, <span className="text-neon-green">Ethio</span>{' '}<span className="text-gold-primary">AI</span>{' '}<span className="text-red-primary">Solutions</span> shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from:
               </p>
               <ul className="list-disc list-inside space-y-2 text-base sm:text-lg ml-4">
                 <li>Your use or inability to use our services</li>
@@ -215,7 +215,7 @@ export default function TermsOfServicePage() {
             >
               <h2 className="text-2xl sm:text-3xl font-bold text-gold-primary mb-4">10. Indemnification</h2>
               <p className="text-base sm:text-lg leading-relaxed">
-                You agree to indemnify, defend, and hold harmless Ethio AI Solutions, its officers, directors, employees, agents, and affiliates from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys&apos; fees) arising from or relating to:
+                You agree to indemnify, defend, and hold harmless <span className="text-neon-green">Ethio</span>{' '}<span className="text-gold-primary">AI</span>{' '}<span className="text-red-primary">Solutions</span>, its officers, directors, employees, agents, and affiliates from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys&apos; fees) arising from or relating to:
               </p>
               <ul className="list-disc list-inside space-y-2 text-base sm:text-lg ml-4">
                 <li>Your use of our services</li>

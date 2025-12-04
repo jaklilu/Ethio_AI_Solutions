@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
             >
               <h2 className="text-2xl sm:text-3xl font-bold text-gold-primary mb-4">1. Introduction</h2>
               <p className="text-base sm:text-lg leading-relaxed">
-                Welcome to Ethio AI Solutions (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                Welcome to <span className="text-neon-green">Ethio</span>{' '}<span className="text-gold-primary">AI</span>{' '}<span className="text-red-primary">Solutions</span> (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
               </p>
               <p className="text-base sm:text-lg leading-relaxed">
                 By accessing or using our website, you agree to the terms of this Privacy Policy. If you do not agree with the practices described in this policy, please do not use our services.
