@@ -137,7 +137,7 @@ export default function AboutPage() {
                 Working with both large enterprises and small businesses has shown us something important: AI can transform the way organizations operate — but small businesses are often left behind due to cost, complexity, and lack of accessible expertise.
               </p>
               <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                That gap is why we founded Ethio AI Solutions. We bring a holistic understanding of systems — from infrastructure and data flow to cloud applications and human workflows — and apply it in a way that&apos;s simple, practical, and results-driven.
+                That gap is why we founded <span className="text-neon-green">Ethio</span>{' '}<span className="text-gold-primary">AI</span>{' '}<span className="text-red-primary">Solutions</span>. We bring a holistic understanding of systems — from infrastructure and data flow to cloud applications and human workflows — and apply it in a way that&apos;s simple, practical, and results-driven.
               </p>
               <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                 Small businesses don&apos;t need technology for technology&apos;s sake. They need clear ROI, quick wins, and automation that fits naturally into their existing workflow. Our job is to deliver exactly that: solutions that reduce manual work, eliminate bottlenecks, and have real impact from day one.
