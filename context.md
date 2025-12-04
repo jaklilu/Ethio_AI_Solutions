@@ -96,6 +96,22 @@ Built a modern, futuristic website/webapp for Ethio AI Solutions - a consultancy
 - Each with industry, solution, results, and technologies
 - Real projects with actual results and technologies used
 
+#### Privacy Policy Page (`app/privacy/page.tsx`):
+- Comprehensive privacy policy with standard legal sections
+- Information collection and use policies
+- Data security and user rights information
+- Cookies and tracking technologies disclosure
+- Contact information with clickable links
+- All brand name instances use brand colors (green, yellow, red)
+
+#### Terms of Service Page (`app/terms/page.tsx`):
+- Complete terms of service with standard legal sections
+- Service description and user obligations
+- Intellectual property and payment terms
+- Limitation of liability and indemnification clauses
+- Governing law and contact information
+- All brand name instances use brand colors (green, yellow, red)
+
 #### About Page (`app/about/page.tsx`):
 - Updated mission statement focusing on practical, affordable AI automation
 - Company values (Accessibility, Partnership, Innovation, Practicality)
@@ -440,7 +456,11 @@ ethio-ai-solutions/
 │   │   └── page.tsx
 │   ├── portfolio/
 │   │   └── page.tsx
+│   ├── privacy/
+│   │   └── page.tsx
 │   ├── services/
+│   │   └── page.tsx
+│   ├── terms/
 │   │   └── page.tsx
 │   ├── globals.css
 │   ├── layout.tsx
@@ -527,6 +547,9 @@ ethio-ai-solutions/
 - Industries section
 - Services page enhancements
 - About page content updates
+- Privacy Policy and Terms of Service pages
+- Home page spacing optimization (more compact layout)
+- Brand name color consistency across all pages
 
 🔄 **In Progress**: 
 - Ready for backend integration
@@ -537,12 +560,34 @@ ethio-ai-solutions/
 - Analytics implementation
 - Social media links update
 
-**Last Updated**: December 2024
+**Last Updated**: January 2025
 
 ### Contact Page Enhancements
 1. **Clickable Phone**: Phone number `(323) 991-9373` opens device dialer when clicked (`tel:+13239919373`)
 2. **Clickable Email**: Email address opens email client when clicked (`mailto:contact@ethioaisolutions.com`)
 3. **Enhanced Error Messages**: Contact form now displays specific error messages from API responses
+
+### Recent Layout & Branding Updates (January 2025)
+1. **Home Page Spacing Optimization**:
+   - Reduced Hero section minimum height from 80-85vh to 65-70vh
+   - Reduced Hero bottom padding from `pb-8 sm:pb-12` to `pb-4 sm:pb-6`
+   - Reduced Services section top padding for tighter spacing
+   - Reduced internal spacing within Hero section elements
+   - Result: More compact layout with less scrolling required to see additional content
+
+2. **Legal Pages Added**:
+   - Privacy Policy page (`/privacy`) with 11 comprehensive sections
+   - Terms of Service page (`/terms`) with 14 comprehensive sections
+   - Both pages match site design (dark theme, gold accents)
+   - Footer links updated and functional
+   - Auto-updating "Last updated" dates
+
+3. **Brand Name Consistency**:
+   - Updated all instances of "Ethio AI Solutions" across all pages to use brand colors
+   - Privacy Policy: 2 instances (introduction + contact)
+   - Terms of Service: 6 instances (all sections + contact)
+   - About page: 1 instance ("Why We Do This" section)
+   - All now display with: Ethio (neon green), AI (gold), Solutions (red)
 
 ## Build Fixes Applied
 
@@ -585,15 +630,18 @@ ethio-ai-solutions/
    - Changed "API Integrations" to "Custom Dashboards & Small Apps"
 5. **About Page**: Updated "Our Mission" and "Why We Do This" sections with new messaging focused on holistic system understanding and results-driven approach
 6. **Removed Credibility Section**: Removed "25+ Years of Enterprise IT Experience" section from home and about pages as requested
+7. **Legal Pages**: Added Privacy Policy and Terms of Service pages with comprehensive standard legal wording, matching site design and brand colors
 
 ### Design & UI Updates
 1. **Brand Colors**: Updated "Ethio AI Solutions" text colors:
    - Ethio: Neon Green (`#39ff14`)
    - AI: Gold (`#ffd700`)
    - Solutions: Red (`#ef4444`)
+   - Applied consistently across all pages (Home, About, Privacy, Terms, Footer, Contact)
 2. **New Industries Section**: Added section highlighting 6 industries with specific automation examples
 3. **Enhanced Mobile Menu**: Improved styling with gradients, glow effects, and better animations
 4. **Strengthened CTAs**: Updated call-to-action buttons and messaging throughout the site
+5. **Home Page Spacing**: Reduced Hero section height (65-70vh) and tightened spacing between sections for more compact, scroll-friendly layout
 
 ### SEO Enhancements
 1. **Updated Metadata**: Enhanced SEO with comprehensive keywords and descriptions
@@ -610,6 +658,9 @@ ethio-ai-solutions/
 7. **Error Handling**: Enhanced contact form error handling to show specific API error messages
 8. **Copyright Year**: Set to 2023 using constant in Footer component
 9. **Git Configuration**: Updated `.gitignore` to exclude backup JSON files and n8n workflow files
+10. **Legal Pages**: Added Privacy Policy (`/privacy`) and Terms of Service (`/terms`) pages with standard legal wording
+11. **Home Page Spacing**: Further reduced Hero section height from 80-85vh to 65-70vh for more compact layout
+12. **Brand Consistency**: Updated all instances of "Ethio AI Solutions" across all pages to use brand colors (green, yellow, red)
 
 ---
 
