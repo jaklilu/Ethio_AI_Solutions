@@ -109,6 +109,25 @@ export default function ContactPage() {
                 <Card className="p-6">
                   <div className="flex items-start gap-4">
                     <a
+                      href="https://calendly.com/contact-ethioaisolutions/30min"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-start gap-4 text-sm sm:text-base text-gold-primary hover:text-gold-accent transition-colors touch-manipulation w-full"
+                    >
+                      <div className="p-3 bg-gold-primary/10 rounded-lg flex-shrink-0">
+                        <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-gold-primary" />
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-semibold text-gray-400 mb-1">Schedule a free consultation</h3>
+                        <span className="block text-sm sm:text-base">Book a 30-minute meeting</span>
+                      </div>
+                    </a>
+                  </div>
+                </Card>
+
+                <Card className="p-6">
+                  <div className="flex items-start gap-4">
+                    <a
                       href="mailto:contact@ethioaisolutions.com"
                       className="flex items-start gap-4 text-sm sm:text-base text-gold-primary hover:text-gold-accent transition-colors touch-manipulation"
                     >
@@ -151,25 +170,6 @@ export default function ContactPage() {
                         United States
                       </p>
                     </div>
-                  </div>
-                </Card>
-
-                <Card className="p-6">
-                  <div className="flex items-start gap-4">
-                    <a
-                      href="https://calendly.com/contact-ethioaisolutions/30min"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-start gap-4 text-sm sm:text-base text-gold-primary hover:text-gold-accent transition-colors touch-manipulation w-full"
-                    >
-                      <div className="p-3 bg-gold-primary/10 rounded-lg flex-shrink-0">
-                        <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-gold-primary" />
-                      </div>
-                      <div>
-                        <h3 className="text-sm font-semibold text-gray-400 mb-1">Book a Meeting</h3>
-                        <span className="block text-sm sm:text-base">Schedule a consultation</span>
-                      </div>
-                    </a>
                   </div>
                 </Card>
               </motion.div>
