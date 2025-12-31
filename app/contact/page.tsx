@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Send, Mail, Phone, MapPin, MessageSquare } from 'lucide-react'
+import { Send, Mail, Phone, MapPin, MessageSquare, Calendar } from 'lucide-react'
 import Card from '@/components/ui/Card'
 import Button from '@/components/ui/Button'
 
@@ -151,6 +151,23 @@ export default function ContactPage() {
                         United States
                       </p>
                     </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6">
+                  <div className="flex items-start gap-4">
+                    <a
+                      href="mailto:contact@ethioaisolutions.com?subject=Schedule%20a%20Consultation&body=Hi,%20I%20would%20like%20to%20schedule%20a%20consultation%20meeting."
+                      className="flex items-start gap-4 text-sm sm:text-base text-gold-primary hover:text-gold-accent transition-colors touch-manipulation w-full"
+                    >
+                      <div className="p-3 bg-gold-primary/10 rounded-lg flex-shrink-0">
+                        <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-gold-primary" />
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-semibold text-gray-400 mb-1">Book a Meeting</h3>
+                        <span className="block text-sm sm:text-base">Schedule a consultation</span>
+                      </div>
+                    </a>
                   </div>
                 </Card>
               </motion.div>
