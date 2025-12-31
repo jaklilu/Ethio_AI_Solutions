@@ -157,7 +157,9 @@ export default function ContactPage() {
                 <Card className="p-6">
                   <div className="flex items-start gap-4">
                     <a
-                      href="mailto:contact@ethioaisolutions.com?subject=Schedule%20a%20Consultation&body=Hi,%20I%20would%20like%20to%20schedule%20a%20consultation%20meeting."
+                      href="https://calendly.com/contact-ethioaisolutions/30min"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-start gap-4 text-sm sm:text-base text-gold-primary hover:text-gold-accent transition-colors touch-manipulation w-full"
                     >
                       <div className="p-3 bg-gold-primary/10 rounded-lg flex-shrink-0">
