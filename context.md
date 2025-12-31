@@ -47,6 +47,10 @@ Built a modern, futuristic website/webapp for Ethio AI Solutions - a consultancy
   - Includes patterns for backup JSON files (`*backup*.json`)
   - Includes patterns for n8n workflow JSON files (`*n8n workflow*.json`)
 - `netlify.toml` - Netlify deployment configuration
+  - Uses `@netlify/plugin-nextjs` for automatic Next.js optimization
+  - Build command: `npm run build`
+  - Node.js version: 18
+  - Publish directory handled automatically by plugin (no manual configuration needed)
 - `@types/nodemailer` - Type definitions for Nodemailer (dev dependency)
 
 ### 2. Core Application Files
@@ -126,10 +130,11 @@ Built a modern, futuristic website/webapp for Ethio AI Solutions - a consultancy
   - Phone (optional)
   - Company (optional)
   - Message (required)
-- Contact information cards:
-  - Email: Clickable link (`mailto:contact@ethioaisolutions.com`) with icon
-  - Phone: Clickable link (`tel:+13236732570`) with icon - dials when clicked
-  - Location: United States
+- Contact information cards (in order):
+  1. **Schedule a free consultation**: Calendly booking link (`https://calendly.com/contact-ethioaisolutions/30min`) - opens in new tab
+  2. **Call Now — AI agent available 24/7**: Clickable link (`tel:+13236732570`) with icon - dials when clicked, phone number: (323) 673-2570
+  3. **Email**: Clickable link (`mailto:contact@ethioaisolutions.com`) with icon
+  4. **Location**: United States
 - Form validation
 - Success/error messaging with detailed error display
 - API integration with Gmail SMTP (Nodemailer)
@@ -142,6 +147,7 @@ Built a modern, futuristic website/webapp for Ethio AI Solutions - a consultancy
 - Gmail SMTP (Nodemailer) integration for email delivery
 - Environment variables: `GMAIL_USER`, `GMAIL_APP_PASSWORD`, optional `GMAIL_TO_EMAIL`
 - Sends submissions to `contact@ethioaisolutions.com` by default
+- Email subject line: "Ethio AI Solutions Job Request"
 - Configured with `export const runtime = 'nodejs'` for Node.js runtime on Netlify
 - Error handling with detailed logging and responses
 - HTML and plain text email formats
@@ -560,12 +566,49 @@ ethio-ai-solutions/
 - Analytics implementation
 - Social media links update
 
-**Last Updated**: January 2025
+**Last Updated**: January 2025 (Phone number, email subject, booking card, contact page updates)
 
 ### Contact Page Enhancements
 1. **Clickable Phone**: Phone number `(323) 673-2570` opens device dialer when clicked (`tel:+13236732570`)
 2. **Clickable Email**: Email address opens email client when clicked (`mailto:contact@ethioaisolutions.com`)
 3. **Enhanced Error Messages**: Contact form now displays specific error messages from API responses
+
+### Recent Updates (January 2025)
+1. **Phone Number Update**:
+   - Updated phone number from `(323) 991-9373` to `(323) 673-2570` across all pages
+   - Updated in: Footer, Contact page, Privacy Policy, Terms of Service
+   - All `tel:` links updated to `tel:+13236732570`
+
+2. **Email Subject Line Update**:
+   - Changed contact form email subject from `"New contact form submission from [Name]"` to `"Ethio AI Solutions Job Request"`
+   - Updated in `app/api/contact/route.ts`
+   - All contact form submissions now use consistent subject line
+
+3. **Contact Page Booking Card**:
+   - Added new booking card to contact page with calendar icon
+   - Label: "Schedule a free consultation"
+   - Subtitle: "Book a 30-minute meeting"
+   - Links to Calendly: `https://calendly.com/contact-ethioaisolutions/30min`
+   - Opens in new tab with proper security attributes
+
+4. **Contact Page Card Ordering**:
+   - Reordered contact cards for better user experience:
+     1. Schedule a free consultation (booking card)
+     2. Call Now — AI agent available 24/7 (phone card)
+     3. Email
+     4. Location
+   - Booking card moved to top position for prominence
+   - Phone card moved to second position
+
+5. **Phone Card Label Update**:
+   - Changed phone card label from "Phone" to "Call Now — AI agent available 24/7"
+   - Emphasizes 24/7 availability and AI agent capability
+   - Phone number remains: `(323) 673-2570`
+
+6. **Netlify Configuration Fix**:
+   - Removed `publish = ".next"` from `netlify.toml`
+   - The `@netlify/plugin-nextjs` plugin handles publish directory automatically
+   - Resolves potential deployment configuration conflicts
 
 ### Recent Layout & Branding Updates (January 2025)
 1. **Home Page Spacing Optimization**:
