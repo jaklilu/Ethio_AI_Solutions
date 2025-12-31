@@ -128,23 +128,6 @@ export default function ContactPage() {
                 <Card className="p-6">
                   <div className="flex items-start gap-4">
                     <a
-                      href="mailto:contact@ethioaisolutions.com"
-                      className="flex items-start gap-4 text-sm sm:text-base text-gold-primary hover:text-gold-accent transition-colors touch-manipulation"
-                    >
-                      <div className="p-3 bg-gold-primary/10 rounded-lg flex-shrink-0">
-                        <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-gold-primary" />
-                      </div>
-                      <div>
-                        <h3 className="text-sm font-semibold text-gray-400 mb-1">Email</h3>
-                        <span className="block">contact@ethioaisolutions.com</span>
-                      </div>
-                    </a>
-                  </div>
-                </Card>
-
-                <Card className="p-6">
-                  <div className="flex items-start gap-4">
-                    <a
                       href="tel:+13236732570"
                       className="flex items-start gap-4 text-sm sm:text-base text-gold-primary hover:text-gold-accent transition-colors touch-manipulation"
                     >
@@ -154,6 +137,23 @@ export default function ContactPage() {
                       <div>
                         <h3 className="text-sm font-semibold text-gray-400 mb-1">Call Now — AI agent available 24/7</h3>
                         <span className="block">(323) 673-2570</span>
+                      </div>
+                    </a>
+                  </div>
+                </Card>
+
+                <Card className="p-6">
+                  <div className="flex items-start gap-4">
+                    <a
+                      href="mailto:contact@ethioaisolutions.com"
+                      className="flex items-start gap-4 text-sm sm:text-base text-gold-primary hover:text-gold-accent transition-colors touch-manipulation"
+                    >
+                      <div className="p-3 bg-gold-primary/10 rounded-lg flex-shrink-0">
+                        <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-gold-primary" />
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-semibold text-gray-400 mb-1">Email</h3>
+                        <span className="block">contact@ethioaisolutions.com</span>
                       </div>
                     </a>
                   </div>
