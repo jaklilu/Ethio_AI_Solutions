@@ -109,11 +109,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+13239919373"
+                  href="tel:+13236732570"
                   className="flex items-center gap-2 text-sm text-gray-400 hover:text-gold-primary transition-colors touch-manipulation"
                 >
                   <Phone className="w-4 h-4" />
-                  (323) 991-9373
+                  (323) 673-2570
                 </a>
               </li>
               <li>

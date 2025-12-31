@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
       from: `"Ethio AI Solutions" <${gmailUser}>`,
       to: toEmail,
       replyTo: email,
-      subject: `New contact form submission from ${name}`,
+      subject: `Ethio AI Solutions Job Request`,
       text: plainText,
       html: htmlBody,
     })

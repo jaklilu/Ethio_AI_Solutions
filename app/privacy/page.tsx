@@ -234,7 +234,7 @@ export default function PrivacyPolicyPage() {
                   Email: <a href="mailto:contact@ethioaisolutions.com" className="text-gold-primary hover:text-gold-accent">contact@ethioaisolutions.com</a>
                 </p>
                 <p className="text-base sm:text-lg text-gray-400">
-                  Phone: <a href="tel:+13239919373" className="text-gold-primary hover:text-gold-accent">(323) 991-9373</a>
+                  Phone: <a href="tel:+13236732570" className="text-gold-primary hover:text-gold-accent">(323) 673-2570</a>
                 </p>
               </div>
             </motion.div>

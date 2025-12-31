@@ -126,7 +126,7 @@ export default function ContactPage() {
                 <Card className="p-6">
                   <div className="flex items-start gap-4">
                     <a
-                      href="tel:+13239919373"
+                      href="tel:+13236732570"
                       className="flex items-start gap-4 text-sm sm:text-base text-gold-primary hover:text-gold-accent transition-colors touch-manipulation"
                     >
                       <div className="p-3 bg-gold-primary/10 rounded-lg flex-shrink-0">
@@ -134,7 +134,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="text-sm font-semibold text-gray-400 mb-1">Phone</h3>
-                        <span className="block">(323) 991-9373</span>
+                        <span className="block">(323) 673-2570</span>
                       </div>
                     </a>
                   </div>
@@ -231,7 +231,7 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 bg-dark-elevated border border-gold-primary/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gold-primary focus:ring-2 focus:ring-gold-primary/20 transition-all text-base touch-manipulation"
-                        placeholder="(323) 991-9373"
+                        placeholder="(323) 673-2570"
                       />
                     </div>
 

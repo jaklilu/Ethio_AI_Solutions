@@ -128,7 +128,7 @@ Built a modern, futuristic website/webapp for Ethio AI Solutions - a consultancy
   - Message (required)
 - Contact information cards:
   - Email: Clickable link (`mailto:contact@ethioaisolutions.com`) with icon
-  - Phone: Clickable link (`tel:+13239919373`) with icon - dials when clicked
+  - Phone: Clickable link (`tel:+13236732570`) with icon - dials when clicked
   - Location: United States
 - Form validation
 - Success/error messaging with detailed error display
@@ -165,7 +165,7 @@ Built a modern, futuristic website/webapp for Ethio AI Solutions - a consultancy
   - Company links
   - Contact information:
     - Email: Clickable `mailto:` link with icon
-    - Phone: Clickable `tel:` link with icon - (323) 991-9373
+    - Phone: Clickable `tel:` link with icon - (323) 673-2570
     - Location: United States
   - Copyright year: 2023 (using `COPYRIGHT_YEAR` constant)
   - Legal links
@@ -529,7 +529,7 @@ ethio-ai-solutions/
 
 **Company**: Ethio AI Solutions
 **Email**: contact@ethioaisolutions.com
-**Phone**: (323) 991-9373
+**Phone**: (323) 673-2570
 **Location**: United States
 
 *Note: Update contact information in Footer and Contact page with actual details*
@@ -563,7 +563,7 @@ ethio-ai-solutions/
 **Last Updated**: January 2025
 
 ### Contact Page Enhancements
-1. **Clickable Phone**: Phone number `(323) 991-9373` opens device dialer when clicked (`tel:+13239919373`)
+1. **Clickable Phone**: Phone number `(323) 673-2570` opens device dialer when clicked (`tel:+13236732570`)
 2. **Clickable Email**: Email address opens email client when clicked (`mailto:contact@ethioaisolutions.com`)
 3. **Enhanced Error Messages**: Contact form now displays specific error messages from API responses
 
@@ -674,6 +674,6 @@ ethio-ai-solutions/
 6. Consider adding a blog section for SEO
 7. ✅ Error handling implemented with detailed error messages
 8. ✅ Loading states implemented in contact form (`isSubmitting` state)
-9. ✅ Contact information updated: Phone `(323) 991-9373`, Email `contact@ethioaisolutions.com`, Location `United States`
+9. ✅ Contact information updated: Phone `(323) 673-2570`, Email `contact@ethioaisolutions.com`, Location `United States`
 10. Environment variables need to be set in Netlify for production deployment
 
