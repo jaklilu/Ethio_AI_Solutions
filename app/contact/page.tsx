@@ -152,7 +152,7 @@ export default function ContactPage() {
                         <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-gold-primary" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-semibold text-gray-400 mb-1">Phone</h3>
+                        <h3 className="text-sm font-semibold text-gray-400 mb-1">Call Now — AI agent available 24/7</h3>
                         <span className="block">(323) 673-2570</span>
                       </div>
                     </a>
